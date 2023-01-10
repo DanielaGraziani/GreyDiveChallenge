@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { app } from "../firebase/config";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
+import InformationGrid from "./InformationGrid";
 
 const InformationForm = () => {
   const db = getFirestore(app);
@@ -27,21 +28,17 @@ const InformationForm = () => {
   }, []);
 
   return (
+    
     <div>
-      <h2>Users Information</h2>
-      <div className="container card">
-        <div className="card-body">
+      <h2 className="text-gray-900 font-medium text-2xl mt-12 mb-10">Users Information</h2> 
+      <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3 px-36">
           {getInfo.map((list) => (
             <div key={list.id}>
-              <p>Name: {list.full_name}</p>
-              <p>Email: {list.email}</p>
-              <p>country: {list.country_of_origin}</p>
-              <p>Birthday: {new Date(list.birth_date).toLocaleDateString()}</p>
-              <br />
+              <InformationGrid id={list.id} name={list.full_name} email={list.email} country={list.country_of_origin} birth_date={new Date(list.birth_date).toLocaleDateString()}/>
             </div>
           ))}
-        </div>
       </div>
+       
     </div>
   );
 };
