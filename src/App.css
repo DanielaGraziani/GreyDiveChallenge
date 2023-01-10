@@ -13,6 +13,18 @@
   }
 }
 
+.error-input{
+  border: 1px solid rgb(236, 99, 99);
+  
+}
+
+.input-feedback{
+  color:rgb(236, 99, 99);
+  margin-right: 260px;
+  font-size:16px;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
