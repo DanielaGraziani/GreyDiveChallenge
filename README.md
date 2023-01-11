@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Grey Dive Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este challenge tiene como finalidad desarrollar una aplicación web en React.js que lea un archivo JSON y genere una interfaz
+de encuesta con una estética diferente a la de Google Forms. La aplicación podrá enviar las respuestas de la encuesta a una
+base de datos, especificamente a Firebase, debiendo mostrar las respuestas en otra ruta de la aplicación.
 
-## Available Scripts
+## Herramientas
+React.js
+Firebase
+TailwindCSS
+Formik
+Yup
+React Router Dom
+Sweet Alert
+Lottie
 
-In the project directory, you can run:
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para instalar el proyecto, deberas:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clonar este repositorio en tu computadora.
+Acceder a la carpeta del proyecto utilizando líneas de comando.
+Ejecutar el comando npm install para instalar las dependencias del proyecto.
 
-### `npm test`
+## Uso
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para utilizar el proyecto, deberas:
 
-### `npm run build`
+Ejecutar el comando npm start para iniciar el servidor de desarrollo.
+Acceder a la aplicacion en tu navegador a traves de la url 'http://localhost:3000'.
+Completar el formulario utilizando la interfaz generada.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![form](https://user-images.githubusercontent.com/63439379/211728834-9d6f27db-943e-4c7a-93de-cea7c60dc568.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Luego de completar el formulario, presiona el boton Enviar para enviar las respuestas a Firebase.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para poder visualizar la lista de respuestas enviadas, accede a la ruta information  'http://localhost:3000/information'
 
-### `npm run eject`
+![information](https://user-images.githubusercontent.com/63439379/211730458-3f5672d2-d063-4fdf-a899-fa8ab57f069d.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Configuración
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Antes de usar el proyecto, es necesario configurar la conexion a la base de datos de Firebase.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Crea un proyecto en Firebase y habilita la autenticación con una cuenta de correo electrónico y contraseña.
+Crea una base de datos en Firebase y habilita la escritura y lectura de datos.
+En el archivo src/firebase.js, reemplaza el valor de la variable firebaseConfig con la configuración proporcionada en la consola de Firebase para tu proyecto.
 
-## Learn More
+## Contacto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ante cualquier duda o consulta, me puedes contactar a mi correo ddiazgraziani@gmail.com.
+Tambien te invito a visitar mi portafolio: https://danielagraziani-portfolio.vercel.app/
