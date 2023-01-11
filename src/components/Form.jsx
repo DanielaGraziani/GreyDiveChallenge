@@ -27,7 +27,7 @@ const Form = () => {
     <Formik
       initialValues={initialValue}
       validationSchema={Yup.object({
-        full_name: Yup.string().required("Required"),
+        full_name: Yup.string().required("Required").test('contains-numbers', 'only strings', (value) => !/\d/.test(value)),
         email: Yup.string().email("Invalid email address").required("Required"),
         birth_date: Yup.string().required("Required"),
         country_of_origin: Yup.string().required("Required"),
@@ -35,7 +35,7 @@ const Form = () => {
           .required("Required")
           .oneOf([true], "Required"),
       })}
-      onSubmit={async (values, { setSubmitting }) => {
+      onSubmit={async (values, { setSubmitting}) => {
         try {
           await addDoc(collection(db, "users"), {
             ...values});
@@ -151,7 +151,7 @@ const Form = () => {
                         
                         item.type === "submit" ? (
                           <label className="w-full lg:w-4/5 block mx-auto">
-                              <button className="cursor-pointer border-2 border-yellow-200 w-full mt-4 p-2 bg-yellow-200 focus:outline-none active:outline-none focus:bg-theme-yellow active:bg-theme-yellow hover:bg-theme-yellow transition-all"
+                              <button disabled={values.country_of_origin === '¿Cuál es tu país de origen?'} className="cursor-pointer border-2 border-yellow-200 w-full mt-4 p-2 bg-yellow-200 focus:outline-none active:outline-none focus:bg-theme-yellow active:bg-theme-yellow hover:bg-theme-yellow transition-all"
                               key={index} type="submit">
                             {item.label}
                           </button>

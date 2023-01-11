@@ -7,11 +7,7 @@ export const CheckboxInput = ({ label, name, handleChange, value, errors, touche
           name={name}
           onChange={handleChange}
           checked={value}
-          className={
-            errors[name] && touched[name]
-              ? "text-input error"
-              : "text-input"
-          }
+          className={`${errors[name] && touched[name] ? "text-input error " : "text-input"} ${`ml-3`}`}
         />
         {errors[name] && touched[name] && (
           <div className="input-feedback">{errors[name]}</div>
