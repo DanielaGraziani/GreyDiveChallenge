@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "theme-yellow": '#ffc727',
-        "theme-yellow-dark": '#e6b323',
+        "theme-yellow-dark": '#580066',
         "theme-dark": '#37474f',
       },
       height: {

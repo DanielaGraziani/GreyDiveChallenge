@@ -44,7 +44,7 @@ const Form = () => {
               title: "Datos enviados con exito!",
               showConfirmButton: false,
               color: '#716add',
-              html: `<a href="/information">  ¡Conoce nuestra lista de usuarios!</a>`,
+              html: `<a href="/information"> ¡Conoce nuestra lista de usuarios!</a>`,
               footer: `<a href="/">  ¡Permanecer en esta pagina! </a>`,
           });
         } catch (error) {
@@ -56,13 +56,13 @@ const Form = () => {
       }}
     >
       {({ handleChange, handleSubmit, values, errors, touched }) => (
-        <div className="bg-yellow-100 overflow-x-hidden lg:overflow-x-auto lg:overflow-hidden flex items-center justify-center lg:h-screen">
+        <div className="bg-violet-400 overflow-x-hidden lg:overflow-x-auto lg:overflow-hidden flex items-center justify-center lg:h-screen">
           <div className="login-container container w-full lg:w-4/5 lg:bg-white h-screen lg:h-screen-75 lg:border border-gray-300 rounded-lg flex flex-wrap lg:flex-nowrap flex-col lg:flex-row justify-between group">
             {/* product side */}
 
             <div className="w-full lg:w-1/2 h-28 lg:h-full mt-32 lg:mt-0 lg:bg-theme-yellow-dark flex relative order-2 lg:order-1">
               <div className="text-center hidden lg:flex items-center justify-start h-full w-full select-none">
-                <span className="transform block whitespace-nowrap h-full -rotate-90 text-[55px] 2xl:text-[70px] font-black uppercase text-yellow-300 opacity-0 transition-all group-hover:opacity-100 ml-10 2xl:ml-12 group-hover:-ml-20 2xl:group-hover:ml-26 lg:group-hover:ml-20 duration-1000 lg:duration-700 ease-in-out">
+                <span className="transform block whitespace-nowrap h-full -rotate-90 text-[55px] 2xl:text-[70px] font-black uppercase text-violet-400 opacity-0 transition-all group-hover:opacity-100 ml-10 2xl:ml-12 group-hover:-ml-20 2xl:group-hover:ml-26 lg:group-hover:ml-20 duration-1000 lg:duration-700 ease-in-out">
                   {" "}
                   Grey Dive Form
                 </span>
