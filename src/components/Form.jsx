@@ -10,6 +10,7 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 import * as Yup from "yup";
 import { Formik } from "formik";
 import s from "../assets/1.png";
+import Swal from "sweetalert2";
 
 const Form = () => {
   const db = getFirestore(app);
@@ -37,12 +38,21 @@ const Form = () => {
       onSubmit={async (values, { setSubmitting }) => {
         try {
           await addDoc(collection(db, "users"), {
-            ...values,
+            ...values});
+            Swal.fire({
+              icon: "success",
+              title: "Datos enviados con exito!",
+              showConfirmButton: false,
+              color: '#716add',
+              html: `<a href="/information">  ¡Conoce nuestra lista de usuarios!</a>`,
+              footer: `<a href="/">  ¡Permanecer en esta pagina! </a>`,
           });
         } catch (error) {
           console.log(error);
         }
+        values(" ")
         setSubmitting(false);
+        
       }}
     >
       {({ handleChange, handleSubmit, values, errors, touched }) => (
